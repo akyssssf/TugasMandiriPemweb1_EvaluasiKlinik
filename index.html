@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Survei Kepuasan UNS Medical Center</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://scontent.fcgk28-1.fna.fbcdn.net/v/t39.30808-6/494963055_3960553657594631_3248920257207309240_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=2a1932&_nc_eui2=AeFfM_7QfvpRFdsoKMjEHzmAbbMDXe9zTuFtswNd73NO4fhkG11JVuYua-NnSe9OSfa_0vVnk6HZVinfot9SQFtU&_nc_ohc=FXcLYe3g26UQ7kNvwFoEQpL&_nc_oc=Adkn_qdEqF6vN3kHaTxxFTAJoTCSgB4jqWFTREvdTYoz4u8FRAF4wYFbFfn9jPGIDjQ&_nc_zt=23&_nc_ht=scontent.fcgk28-1.fna&_nc_gid=kEyyzn2TFX3uFDJa2ZjBRQ&_nc_ss=8&oh=00_AfznUHYdxq-dhqi0tJMiEZJOctvnu0gHqjJ9VONxkxNKTQ&oe=69B304C5" alt="Banner UNS Medical Center" class="banner-img">
+            <h1>Evaluasi Layanan Klinik UNS</h1>
+        </header>
+
+        <section class="form-section">
+            <form id="formSurvei" onsubmit="submitSurvei(event)">
+                
+                <div class="form-group box-data">
+                    <label for="nama">Nama Lengkap (Opsional):</label>
+                    <input type="text" id="nama" placeholder="Boleh dikosongkan jika ingin anonim">
+                    
+                    <label for="kategori">Kategori Pengunjung:</label>
+                    <select id="kategori" required>
+                        <option value="">-- Pilih Kategori --</option>
+                        <option value="Mahasiswa">Mahasiswa UNS</option>
+                        <option value="Dosen/Karyawan">Dosen / Karyawan UNS</option>
+                        <option value="Umum">Masyarakat Umum</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <h3>Kuesioner Evaluasi Layanan</h3>
+                    <p class="petunjuk">Berilah penilaian dari skala 1 (Buruk) hingga 5 (Sangat Baik):</p>
+                    
+                    <ol class="kuesioner-list">
+                        <li>
+                            <div class="question">
+                                <label>Kemudahan alur pendaftaran layanan klinik</label>
+                                <div class="rating">
+                                    <label><input type="radio" name="q1" value="1" required> 1</label>
+                                    <label><input type="radio" name="q1" value="2"> 2</label>
+                                    <label><input type="radio" name="q1" value="3"> 3</label>
+                                    <label><input type="radio" name="q1" value="4"> 4</label>
+                                    <label><input type="radio" name="q1" value="5"> 5</label>
+                                </div>
+                            </div>
+                        </li>
+                
+                        <li>
+                            <div class="question">
+                                <label>Kecepatan respon dan pelayanan staf administrasi</label>
+                                <div class="rating">
+                                    <label><input type="radio" name="q2" value="1" required> 1</label>
+                                    <label><input type="radio" name="q2" value="2"> 2</label>
+                                    <label><input type="radio" name="q2" value="3"> 3</label>
+                                    <label><input type="radio" name="q2" value="4"> 4</label>
+                                    <label><input type="radio" name="q2" value="5"> 5</label>
+                                </div>
+                            </div>
+                        </li>
+                
+                        <li>
+                            <div class="question">
+                                <label>Keramahan dan sikap santun tenaga medis (dokter/perawat)</label>
+                                <div class="rating">
+                                    <label><input type="radio" name="q3" value="1" required> 1</label>
+                                    <label><input type="radio" name="q3" value="2"> 2</label>
+                                    <label><input type="radio" name="q3" value="3"> 3</label>
+                                    <label><input type="radio" name="q3" value="4"> 4</label>
+                                    <label><input type="radio" name="q3" value="5"> 5</label>
+                                </div>
+                            </div>
+                        </li>
+                
+                        <li>
+                            <div class="question">
+                                <label>Tingkat kepuasan Anda secara keseluruhan</label>
+                                <div class="rating">
+                                    <label><input type="radio" name="q4" value="1" required> 1</label>
+                                    <label><input type="radio" name="q4" value="2"> 2</label>
+                                    <label><input type="radio" name="q4" value="3"> 3</label>
+                                    <label><input type="radio" name="q4" value="4"> 4</label>
+                                    <label><input type="radio" name="q4" value="5"> 5</label>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="form-group box-data">
+                    <label for="saran">Kritik & Saran (Opsional):</label>
+                    <textarea id="saran" rows="4" placeholder="Tuliskan pengalaman atau saran Anda di sini..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Kirim Ulasan</button>
+
+                <div class="info-link">
+                    <p>Tentang layanan klinik UNS <a href="https://uns.ac.id/id/fasilitas-kampus/uns-medical-center" target="_blank">klik disini</a>.</p>
+                </div>
+
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
